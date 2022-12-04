@@ -4,7 +4,7 @@ import axios from 'axios'
 import { client } from "../lib/client";
 import React, { useEffect, useState } from "react";
 import MainBanner from "../Components/MainBanner/MainBanner";
-import Product from "../Components/Product/product";
+import Product from "../Components/Product/Product";
 import FooterBanner from "../Components/FooterBanner/FooterBanner";
 
 const index = ({ products, banners }) => {
