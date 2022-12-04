@@ -6,107 +6,17 @@ import React, { useEffect, useState } from "react";
 import MainBanner from "../Components/MainBanner/MainBanner";
 import Product from "../Components/Product/Product";
 import FooterBanner from "../Components/FooterBanner/FooterBanner";
+import ProductHover from '../Components/ProductHover/ProductHover'
 
 const index = ({ products, banners }) => {
   return (
     <div className="home">
       <MainBanner mainBanner={banners.length && banners[0]} />
-      <div className="Products__Heading">
-        <h2>Best Product in the Market </h2>
-        <p>Now available for sale in our Store</p>
-      </div>
-
-      <div className="Products__Containers__Container">
-        <div className="grad-left"></div>
-        <div className="Products__Container">
-          {products.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </div>
-        <div className="grad-right"></div>
-      </div>
-
-      <div className="Products__Heading">
-        <h2>The Recently Available </h2>
-        <p>Now available for sale in our Store</p>
-      </div>
-      <div className="Products__Containers__Container">
-        <div className="grad-left"></div>
-        <div className="Products__Container">
-          {products.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </div>
-        <div className="grad-right"></div>
-      </div>
-      <div className="Products__Heading">
-        <h2>The Most Valuable </h2>
-        <p>Now available for sale in our Store</p>
-      </div>
-      <div className="Products__Containers__Container">
-        <div className="grad-left"></div>
-        <div className="Products__Container">
-          {products.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </div>
-        <div className="grad-right"></div>
-      </div>
-      <div className="Products__Heading">
-        <h2>The Highly Recommended </h2>
-        <p>Now available for sale in our Store</p>
-      </div>
-      <div className="Products__Containers__Container">
-      <div className="grad-left"></div>
-      <div className="Products__Container">
-        {products.map((product) => (
-          <Product key={product._id} product={product} />
-        ))}
-      </div>
-      <div className="grad-right"></div>
-    </div>
-      <div className="Products__Heading">
-        <h2>The Popular Products </h2>
-        <p>Now available for sale in our Store</p>
-      </div>
-      <div className="Products__Containers__Container">
-        <div className="grad-left"></div>
-        <div className="Products__Container">
-          {products.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </div>
-        <div className="grad-right"></div>
-      </div>
-      <div className="Products__Heading">
-        <h2>The Popular Products </h2>
-        <p>Now available for sale in our Store</p>
-      </div>
-      <div className="Products__Containers__Container">
-        <div className="grad-left"></div>
-        <div className="Products__Container">
-          {products.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </div>
-        <div className="grad-right"></div>
-      </div>
-
-      <div className="Products__Heading">
-        <h2>The Recently Available </h2>
-        <p>Now available for sale in our Store</p>
-      </div>
-
-      <div className="Products__Containers__Container">
-        <div className="grad-left"></div>
-        <div className="Products__Container">
-          {products && products.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </div>
-        <div className="grad-right"></div>
-      </div>
-
+      <ProductHover products={products}/>
+      <ProductHover products={products}/>
+      <ProductHover products={products}/>
+      <ProductHover products={products}/>
+      <ProductHover products={products}/>
       <FooterBanner footerBanner={banners.length && banners[0]} />
     </div>
   );
