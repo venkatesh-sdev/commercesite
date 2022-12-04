@@ -96,7 +96,7 @@ a {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 68, 0);    /* color of the scroll thumb */
+  background: linear-gradient(45deg, blue, rgb(255, 94, 0));    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid rgb(0, 136, 255);  /* creates padding around scroll thumb */
 }
