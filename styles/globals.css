@@ -64,7 +64,7 @@ a {
 
 @media screen and (max-width: 490px) {
   .home {
-    padding: 0 10px !important;
+    padding: 0 5px !important;
   }
 
   .grad-left{
@@ -72,6 +72,13 @@ a {
   }
   .grad-right{
     width:10px;
+  }
+
+  .Products__Heading h2{
+    font-size:20px !important;
+  }
+  .Products__Heading p{
+    font-size:16px !important;
   }
 }
 
@@ -88,20 +95,19 @@ a {
 }
 
 *::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 12px;               
 }
 
 *::-webkit-scrollbar-track {
-  background: rgb(0, 136, 255);        /* color of the tracking area */
+  background: rgb(0, 136, 255);      
 }
 
 *::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, blue, rgb(255, 94, 0));    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid rgb(0, 136, 255);  /* creates padding around scroll thumb */
-}
+  background: linear-gradient(45deg, blue, rgb(255, 94, 0));    
+  border-radius: 20px;      
+  border: 3px solid rgb(0, 136, 255); 
 
-  
+}
 
 .Products__Containers__Container{
   position: relative;

@@ -25,3 +25,10 @@
 .FooterIcons > svg:nth-child(2):hover {
   color: rgb(0, 238, 255) !important;
 }
+
+
+@media screen and (max-width:400px) {
+  .FooterContainer p{
+    font-size:16px;
+  }
+}

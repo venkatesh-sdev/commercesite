@@ -15,7 +15,7 @@
   border-radius: 20px;
 }
 
-.productImageContainer img {
+.productImageContainer > img {
   width: 400px;
   object-fit: contain;
 }
@@ -50,6 +50,11 @@
   margin-top: 20px;
   background-color: rgb(157, 16, 0);
 }
+
+.Product__details__Container{
+  display: block;
+}
+
 .starContainer {
   display: flex;
   align-items: center;
@@ -70,6 +75,7 @@
   text-align: center;
   margin-top: 20px;
   display: flex;
+  flex-wrap:wrap;
 }
 .quanity_desc {
   margin-left: 40px;
@@ -123,4 +129,76 @@
 
 .buttonContianer button:hover {
   background: rgb(255, 68, 0);
+}
+
+@media screen and (max-width:900px){
+  .productContainer{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Product__details__Container{
+    margin:70px;
+  }
+  .container {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .productImageContainer {
+    width: 250px;
+    height: 250px;
+  }
+  .productImageContainer > img{
+    width:250px;
+    object-fit: contain;
+  }
+
+  .smallImageContainerContain {
+    width: 50px;
+    height: 50px;
+  }
+  .smallImageContainerContain > img{
+    width:50px;
+    object-fit: contain;
+  }
+  .smallImageContainerContainSelected{
+    width:50px;
+    height:50px;
+  }
+  .smallImageContainerContainSelected{
+    width:50px;
+  }
+
+  .smallImageContainer {
+    gap: 18px;
+  }
+
+  .Product__details__Container{
+    margin:50px;
+  }
+
+  .Product__details__Container > h1{
+    font-size:25px;
+  }
+  .container {
+    padding: 15px;
+  }
+  .buttonContianer button {
+    padding: 5px 15px;
+  }
+  .quanity_desc span {
+   padding:5px 15px;
+  }
+  .quanity {
+    margin-top:30px;
+    gap:15px;
+    text-align: center;
+    flex-direction: column;
+  }
+  .quanity_desc {
+    margin-left: 10px;
+  }
+  
+  
 }

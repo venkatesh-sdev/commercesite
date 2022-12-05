@@ -32,6 +32,24 @@ const Products = ({ product, products }) => {
       <div className={styles.productContainer}>
         <div className={styles.productImageContainer}>
           <img src={urlFor(image[index])} alt="" />
+          <div className={styles.smallImageContainer}>
+            {image.map((item, id) => (
+              <div
+                className={
+                  id === index
+                    ? styles.smallImageContainerContainSelected
+                    : styles.smallImageContainerContain
+                }
+                key={id}
+              >
+                <img
+                  src={urlFor(item)}
+                  alt=""
+                  onMouseOver={() => setIndex(id)}
+                />
+              </div>
+            ))}
+          </div>
         </div>
         <div className={styles.Product__details__Container}>
           <h1>{name}</h1>
@@ -83,21 +101,6 @@ const Products = ({ product, products }) => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className={styles.smallImageContainer}>
-        {image.map((item, id) => (
-          <div
-            className={
-              id === index
-                ? styles.smallImageContainerContainSelected
-                : styles.smallImageContainerContain
-            }
-            key={id}
-          >
-            <img src={urlFor(item)} alt="" onMouseOver={() => setIndex(id)} />
-          </div>
-        ))}
       </div>
 
       <ProductHover products={products} />
