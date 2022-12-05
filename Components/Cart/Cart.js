@@ -84,7 +84,7 @@ const Cart = () => {
                 <div className={styles.itemsDesc}>
                   <div className={styles.descTop}>
                     <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h4>₹{item.price}</h4>
                   </div>
                   <div className={styles.descBottom}>
                     <span
