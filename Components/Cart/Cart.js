@@ -117,7 +117,7 @@ const Cart = () => {
           <div className={styles.cartBottonContianer}>
             <div className={styles.TotalContianer}>
               <h3>
-                Subtotal:<span>${totalPrice}</span>
+                Subtotal:<span>₹{totalPrice}</span>
               </h3>
             </div>
             <div className={styles.buttonContainer}>

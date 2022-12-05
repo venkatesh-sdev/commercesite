@@ -18,7 +18,7 @@ const Product1 = ({ product: { image, name, slug, price } }) => {
        /></div>
         </div>
         <p className={styles.Product__name}>{name}</p>
-        <p className={styles.Product__price}>Rs. {price}</p>
+        <p className={styles.Product__price}>₹ {price}</p>
       </Link>
     </div>
   );

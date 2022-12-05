@@ -65,7 +65,7 @@ const Products = ({ product, products }) => {
             <div className={styles.details}>
               <h1>Details</h1>
               <p>{details}</p>
-              <h3>${price}</h3>
+              <h3>₹{price}</h3>
               <div className={styles.quanity}>
                 <h3>Quantity</h3>
                 <p className={styles.quanity_desc}>
@@ -89,7 +89,7 @@ const Products = ({ product, products }) => {
                 </p>
               </div>
               <div className={styles.buttonContianer}>
-                <button onClick={handleBuy}>Buy Now</button>
+                <button onClick={handleBuy}>₹ Buy Now</button>
                 <button
                   onClick={() => {
                     onAdd(product, qty);
