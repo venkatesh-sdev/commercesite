@@ -13,6 +13,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
 import { urlFor } from "../../lib/client";
 import Link from "next/link";
+import getStripe from "../../lib/getStripe";
 
 const Cart = () => {
   const {
@@ -24,12 +25,32 @@ const Cart = () => {
     onRemove,
   } = useStateContext();
 
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    const response = await fetch("/api/stripe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cartItems),
+    });
+
+    // if(response.statusCode === 500) return;
+
+    const data = await response.json();
+
+    toast.loading("Redirecting to Payment...");
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  };
+
   return (
     <div className={styles.CartWrapper}>
       <div className={styles.CartContainer}>
         <button
           className={styles.CartHeading}
-          onClick={() => setShowCart(false) }
+          onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
           <span className={styles.Heading}>YourCart</span>
@@ -53,7 +74,7 @@ const Cart = () => {
 
         <div className={styles.ProductContainer}>
           {cartItems.length >= 1 &&
-            cartItems.map((item,) => (
+            cartItems.map((item) => (
               <div className={styles.product} key={item._id}>
                 <img
                   src={urlFor(item.image[0])}
@@ -95,10 +116,14 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div className={styles.cartBottonContianer}>
             <div className={styles.TotalContianer}>
-              <h3>Subtotal:<span>${totalPrice}</span></h3>
+              <h3>
+                Subtotal:<span>${totalPrice}</span>
+              </h3>
             </div>
             <div className={styles.buttonContainer}>
-              <button className={styles.PayButton}>Go To Payments</button>
+              <button className={styles.PayButton} onClick={handleCheckout}>
+                Go To Payments
+              </button>
             </div>
           </div>
         )}
