@@ -98,6 +98,10 @@ a {
   width: 12px;               
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 *::-webkit-scrollbar-track {
   background: rgb(0, 136, 255);      
 }
