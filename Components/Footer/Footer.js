@@ -5,8 +5,7 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <div className={styles.FooterContainer}>
-      <p>Developed By Venkat </p>
-      <p>Contact: venkatesh.dev.main@gmail.com</p>
+    <p>Ecommecre Site Development</p>
       <p className={styles.FooterIcons}>
         <AiFillInstagram />
         <AiOutlineTwitter />
@@ -16,3 +15,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// <p>Developed By Venkat </p>
+      // <p>Contact: venkatesh.dev.main@gmail.com</p>
