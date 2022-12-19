@@ -2,7 +2,7 @@ import React, { useState, useEffect, FC } from "react";
 import Link from "next/link";
 import { BsBagCheckFill } from "react-icons/bs";
 import { useStateContext } from "../context/StateContext";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Success.module.css";
 
 import {runFireworks} from '../lib/utils'
 
