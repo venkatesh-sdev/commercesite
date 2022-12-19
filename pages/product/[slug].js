@@ -21,6 +21,7 @@ const Products = ({ product, products }) => {
     setShowCart,
     setCartProductQty,
     cartProductQty,
+    isLogin
   } = useStateContext();
   const [index, setIndex] = useState(0);
   const handleBuy = () => {

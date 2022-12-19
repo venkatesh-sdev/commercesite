@@ -17,6 +17,7 @@
 .cartItems{
     width:fit-content;
     background: none;
+    margin-left:50px;
     border:none;
     color:white;
     position: relative;
@@ -47,4 +48,18 @@
 
 .cartItems > span > span{
     display: block;
+}
+
+.logout{
+    display: block;
+    padding:5px 20px;
+    color: white;
+    background: red;
+    border:none;
+    border-radius:5px;
+}
+
+.cartItemsLogout{
+    margin-top:20px;
+    margin-left:30px;
 }

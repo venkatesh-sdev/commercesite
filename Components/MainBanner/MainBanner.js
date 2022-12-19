@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./MainBanner.module.css";
 import { urlFor } from "../../lib/client";
 import Link from "next/link";
+import { runFireworks } from "../../lib/utils";
+import toast from 'react-hot-toast'
 
 const MainBanner = ({ mainBanner }) => {
+
   return (
     <div className={styles.Banner}>
+    
       <div className={styles.text_Container}>
         <p className={styles.Banner_smallText}>{mainBanner.smallText} </p>
         <h3 className={styles.Banner_midText}>{mainBanner.midText} </h3>

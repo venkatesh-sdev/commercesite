@@ -9,7 +9,11 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
-  const [cartProductQty,setCartProductQty] = useState(1);
+  const [cartProductQty, setCartProductQty] = useState(1);
+  const [isLogin, setIsLogin] = useState(false);
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userPassword, setUserPassword] = useState('');
 
   let foundProduct;
   // To add the product to the cartItems
@@ -104,6 +108,14 @@ export const StateContext = ({ children }) => {
         setCartItems,
         setTotalPrice,
         setTotalQuantities,
+        isLogin,
+        setIsLogin,
+        userName,
+        userEmail,
+        userPassword,
+        setUserName,
+        setUserEmail,
+        setUserPassword
       }}
     >
       {children}
