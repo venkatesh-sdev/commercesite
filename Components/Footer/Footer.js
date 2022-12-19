@@ -5,7 +5,8 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <div className={styles.FooterContainer}>
-    <p>Ecommecre Site Development</p>
+    <p>Ecommecre Site </p>
+    <p>The Best Site To Buy Products </p>
       <p className={styles.FooterIcons}>
         <AiFillInstagram />
         <AiOutlineTwitter />
