@@ -10,6 +10,8 @@ import {
 } from "react-icons/ai";
 import { useStateContext } from "../../context/StateContext";
 import ProductHover from "../../Components/ProductHover/ProductHover";
+import Login from "../../Components/Login/Login";
+
 
 const Products = ({ product, products }) => {
   const { image, name, price, details } = product;
@@ -21,14 +23,15 @@ const Products = ({ product, products }) => {
     setShowCart,
     setCartProductQty,
     cartProductQty,
-    isLogin
+    isLogin,
   } = useStateContext();
+  
   const [index, setIndex] = useState(0);
   const handleBuy = () => {
     onAdd(product, qty);
     setShowCart(true);
   };
-  return (
+  return isLogin ? (
     <div className={styles.container}>
       <div className={styles.productContainer}>
         <div className={styles.productImageContainer}>
@@ -110,8 +113,12 @@ const Products = ({ product, products }) => {
       <ProductHover products={products} />
       <ProductHover products={products} />
     </div>
+  ) : (
+    <Login />
   );
 };
+
+
 
 export const getStaticPaths = async () => {
   const querys = `*[_type=="product"]{slug{current}}`;

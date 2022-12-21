@@ -55,6 +55,7 @@
     padding:5px 20px;
     color: white;
     background: red;
+    cursor:pointer;
     border:none;
     border-radius:5px;
 }

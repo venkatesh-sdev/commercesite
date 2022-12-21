@@ -15,6 +15,9 @@ export const StateContext = ({ children }) => {
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
 
+
+
+
   let foundProduct;
   // To add the product to the cartItems
   const onAdd = (product, quantity) => {

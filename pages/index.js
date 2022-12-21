@@ -7,25 +7,25 @@ import MainBanner from "../Components/MainBanner/MainBanner";
 import Product from "../Components/Product/Product";
 import FooterBanner from "../Components/FooterBanner/FooterBanner";
 import ProductHover from '../Components/ProductHover/ProductHover'
-import {useStateContext } from "../context/StateContext";
+import { useStateContext } from "../context/StateContext";
 import Login from "../Components/Login/Login";
 import { runFireworks } from "../lib/utils";
 
 const index = ({ products, banners }) => {
-   const {isLogin} = useStateContext();   
+  const { isLogin } = useStateContext();
   return (
     <div className="home">
-    {
-      isLogin?(<React.Fragment><MainBanner mainBanner={banners.length && banners[0]} />
-      <ProductHover products={products}/>
-      <ProductHover products={products}/>
-      <ProductHover products={products}/>
-      <ProductHover products={products}/>
-      <ProductHover products={products}/>
-      <FooterBanner footerBanner={banners.length && banners[0]} /></React.Fragment>):(
-      <Login/>)
-    }
-      
+      {
+        isLogin ? (<React.Fragment><MainBanner mainBanner={banners.length && banners[0]} />
+          <ProductHover products={products} />
+          <ProductHover products={products} />
+          <ProductHover products={products} />
+          <ProductHover products={products} />
+          <ProductHover products={products} />
+          <FooterBanner footerBanner={banners.length && banners[0]} /></React.Fragment>) : (
+          <Login />)
+      }
+
     </div>
   );
 };
@@ -33,7 +33,7 @@ const index = ({ products, banners }) => {
 export default index;
 
 export const getServerSideProps = async () => {
- 
+
   const productQuery = '*[_type=="product"]';
   const products = await client.fetch(productQuery);
   const bannerQuery = '*[_type=="banner"]';
