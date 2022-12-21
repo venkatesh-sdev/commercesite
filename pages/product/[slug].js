@@ -21,11 +21,9 @@ const Products = ({ product, products }) => {
     qty,
     onAdd,
     setShowCart,
-    setCartProductQty,
-    cartProductQty,
     isLogin,
   } = useStateContext();
-  
+
   const [index, setIndex] = useState(0);
   const handleBuy = () => {
     onAdd(product, qty);
